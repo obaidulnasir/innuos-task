@@ -13,6 +13,9 @@ const Album = () => {
         setFilter(filterDataQobuz);
         setFilterdItem(filterDataQobuz);
     }
+    const allData = ()=>{
+        setFilterdItem(allAlbum);
+    }
 
     return (
         <div>
@@ -29,11 +32,9 @@ const Album = () => {
                                     {filterdItem.map((al, idx) => (
                                         <Col key={al.id}>
                                             <Figure>
-                                                <Figure.Image
-                                                    width={171}
-                                                    height={180}
+                                                <Figure.Image  
                                                     alt="171x180"
-                                                    src={``}
+                                                    src={`./img/${al.cover}`}
                                                 />
                                                 <Figure.Caption>
                                                     {al.source}
@@ -43,7 +44,8 @@ const Album = () => {
                                     ))}
                                 </Row>
                                 <button onClick={() => filterByQobuz("LOCAL")}>click</button>
-                                <button onClick={() => filterByQobuz("QOBUZ")}>click</button>
+                                <button onClick={() => filterByQobuz("QOBUZ")}>Qobuz</button>
+                                <button onClick={() => allData()}>all</button>
                             </Container>
                         </Col>
                     </Row>
