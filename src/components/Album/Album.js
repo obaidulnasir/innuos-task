@@ -24,7 +24,11 @@ const Album = () => {
                     <br />
                     <Row>
                         <Col className='col-md-4'>
-
+                            <div>
+                            <button onClick={() => filterByQobuz("LOCAL")}>click</button>
+                                <button onClick={() => filterByQobuz("QOBUZ")}>Qobuz</button>
+                                <button onClick={() => allData()}>all</button>
+                            </div>
                         </Col>
                         <Col className='col-md-8'>
                             <Container>
@@ -34,6 +38,7 @@ const Album = () => {
                                             <Figure>
                                                 <Figure.Image  
                                                     alt="171x180"
+                                                    width="70%"
                                                     src={`./img/${al.cover}`}
                                                 />
                                                 <Figure.Caption>
@@ -43,9 +48,7 @@ const Album = () => {
                                         </Col>
                                     ))}
                                 </Row>
-                                <button onClick={() => filterByQobuz("LOCAL")}>click</button>
-                                <button onClick={() => filterByQobuz("QOBUZ")}>Qobuz</button>
-                                <button onClick={() => allData()}>all</button>
+                                
                             </Container>
                         </Col>
                     </Row>
