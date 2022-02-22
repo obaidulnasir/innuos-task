@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { AlbumContext } from "../components/Context/AlbumProvider/AlbumProvider";
 
-const useAl = ()=>{
+const useAl = () => {
     return useContext(AlbumContext)
 }
 
