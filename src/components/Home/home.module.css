@@ -1,0 +1,12 @@
+.getButton{
+    background-color: #d8b07e;
+    border: 1px solid #fff;
+    padding: 20px 40px;
+}
+
+.getButton:hover{
+    background-color: #54595F;
+    border: 1px solid #d8b07e;
+    padding: 20px 40px;
+    color: #d8b07e;
+}
