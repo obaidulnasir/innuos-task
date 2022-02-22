@@ -19,6 +19,7 @@ const Album = () => {
 
     return (
         <div>
+            
             <div style={{ backgroundColor: "#54595F" }}>
                 <Container>
                     <br />
@@ -40,20 +41,26 @@ const Album = () => {
                             <Container>
                                 <Row xs={1} md={3} lg={4} className="g-4">
                                     {filterdItem.map((al, idx) => (
-                                        <Col className='mx-1 border text-center rounded shadow' key={al.id}>
+                                        <Col className='mx-1 border rounded shadow' key={al.id}>
                                             <div className='p-1'>
                                                 <Figure>
                                                     {
                                                         al.cover ? <Figure.Image
 
-                                                            width="90%"
+                                                            width="100%"
                                                             src={`./img/${al.cover}`}
                                                         /> : <Figure.Image style={{ backgroundColor: "black" }}
 
-                                                            width="90%"
+                                                            width="100%"
                                                             src="./img/undefined_album_cover.png"
                                                         />
                                                     }
+                                                    {
+                                                        al.source ? <div className='text-right' style={{margin:"-25px"}}>
+                                                            <img  src='./img/qobuz.png' width="10%" alt="art" />
+                                                        </div>: ""
+                                                    }
+                                                    <br />
                                                     <p style={{ color: " #d8b07e" }} className="fw-bold">{al.album}</p>
                                                     <Figure.Caption className='text-light fs-6'>
                                                         {al.artist}
